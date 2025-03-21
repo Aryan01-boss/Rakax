@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+p{
+    font-size: 1.3rem;
+    color: #555;
+}
+
+h2{
+  font-size: 3.5rem;
+  color: #333;
+}
