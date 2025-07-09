@@ -1,0 +1,123 @@
+.home-hero-section {
+  background: transparent;
+  text-align: center;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -99;
+}
+
+.home-hero-title {
+  margin-top: 5%;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  /* animation: float 6s ease-in-out infinite; */
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+
+
+.home-hero-title em {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.home-hero-description {
+  font-size: 18px;
+  color: #333;
+  max-width: 580px;
+  margin: 0 auto 24px;
+}
+
+.home-hero-cta-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+#cta-button {
+  background-color: rgba(124, 124, 124, 0.096);
+  color: rgb(0, 0, 0);
+  border-radius: 25px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.144);
+  transition: 0.2s ease;
+
+}
+
+#cta-button:hover {
+  background-color: transparent;
+  scale: 102%;
+}
+
+
+  .home-hero-grid-container {
+    --grid-size: 32px;
+    --grid-color: rgba(10, 10, 10, 0.116);
+  }
+
+  .grid-layer {
+    background-image: 
+      linear-gradient(var(--grid-color) 1px, transparent 2px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 5px);
+    background-size: var(--grid-size) var(--grid-size);
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  
+
+  /* Performance optimizations */
+  .home-hero-grid-container * {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ambient-fog-1,
+    .ambient-fog-2 {
+      animation: none;
+    }
+  }
+
+  /* Responsive grid size */
+  @media (max-width: 768px) {
+    .home-hero-grid-container {
+      --grid-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .home-hero-grid-container {
+      --grid-size: 20px;
+    }
+  }
